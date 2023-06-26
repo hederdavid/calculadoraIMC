@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculadora IMC</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <section class="container">
+    <h1>Calcule seu IMC</h1>
+    <table>
+      <tr>
+      <th></th>
+        <th>IMC</th>
+        <th>PESO</th>
+      </tr>
+      <tr>
+        <td class="strong">Magreza</td>
+        <td>&lt; 16.4</td>
+        <td>&lt; 47.4 Kg</td>
+      </tr>
+      <tr>
+        <td class="strong">Normal</td>
+        <td>16.4 a 25.1</td>
+        <td>47.4 a 72.5 Kg</td>
+      </tr>
+      <tr>
+        <td class="strong">Sobrepeso</td>
+        <td>25.1 a 29.7</td>
+        <td>72.5 a 85.8 Kg</td>
+      </tr>
+      <tr>
+        <td class="strong">Obesidade</td>
+        <td>&gt; 29.7</td>
+        <td>&gt; 85.8 Kg</td>
+      </tr>
+    </table>
+
+    <form class="form" action="">
+      <div class="form__group field">
+        <input type="input" class="input-altura" placeholder="Altura" required="">
+        <label for="altura" class="form__label">Altura (em metros)</label>
+      </div>
+
+      <div class="form__group field">
+        <input type="input" class="input-peso" placeholder="Peso" required="">
+        <label for="peso" class="form__label">Peso (em kg)</label>
+      </div>
+      
+      <button>Calcular</button>
+
+    <div class="resultado"></div>
+  </section>
+   
+
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

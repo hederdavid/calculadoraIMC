@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: "Open sans", sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+}
+
+table th {
+  border: 1px solid black;
+}
+
+table td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 180px;
+  margin-top: 5%;
+}
+
+.form {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.input-altura,
+.input-peso {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #000000;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.input-altura::placeholder,
+.input-peso::placeholder {
+  color: transparent;
+}
+
+.input-altura:placeholder-shown ~ .form__label,
+.input-peso:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.input-altura:focus,
+.input-peso:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
+}
+
+.input-altura:focus ~ .form__label,
+.input-peso:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38caef;
+  font-weight: 700;
+}
+
+.input-altura:required,
+.input-altura:invalid,
+.input-peso:required,
+.input-peso:invalid {
+  box-shadow: none;
+}
+button {
+  padding: 1.3em 3em;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin-top: 5%;
+}
+
+button:hover {
+  box-shadow: 0px 15px 20px rgba(17, 86, 102, 0.355);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
